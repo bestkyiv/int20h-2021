@@ -3,75 +3,18 @@
     margin: 0;
 }
 
-@mixin for-mobile() {
-    @media only screen and (max-width: $media-mobile-bp - 1) {
-        @content;
-    }
-}
-
-@mixin for-mobile-and-sm-tablet() {
-    @media only screen and (max-width: $media-medium-bp - 1) {
-        @content;
-    }
-}
-
-@mixin for-sm-tablet() {
-    @media only screen and (min-width: $media-mobile-bp) and (max-width: $media-medium-bp - 1) {
-        @content;
-    }
-}
-
-@mixin for-tablet() {
-    @media only screen and (min-width: $media-mobile-bp) and (max-width: $media-desktop-bp - 1) {
-        @content;
-    }
-}
-
-@mixin for-tablet-and-desktop() {
-    @media only screen and (min-width: $media-mobile-bp) {
-        @content;
-    }
-}
-
-@mixin for-big-tablet-and-desktop() {
-    @media only screen and (min-width: $media-medium-bp) {
-        @content;
-    }
-}
-
-@mixin for-mobile-and-tablet() {
-    @media only screen and (max-width: $media-desktop-bp - 1) {
-        @content;
-    }
-}
-
-@mixin for-desktop() {
-    @media only screen and (min-width: $media-desktop-bp) {
-        @content;
-    }
-}
-
-@mixin for-big-desktop() {
-    @media only screen and (min-width: $media-big-desktop-bp) {
-        @content;
-    }
-}
-
 .banner {
-    height: 200vh;
-    background: url('../images/divlogo.png') no-repeat;
-    background-size: cover;
+    background: url(../images/divlogo.png) no-repeat;
+    background-size: 100%;
     background-color: #010120;
-    background-position: center;
-    margin: 0;
-    padding: 0;
+    padding: 24px;
 }
 
 .banner__info {
     position: relative;
     text-align: right;
-    padding-top: 25%;
-    padding-right: 7%;
+    padding-top: 28%;
+    padding-right: 6%;
 }
 
 .banner__info__dates,
@@ -81,12 +24,9 @@
     font-weight: 500;
     color: #FFFFFF;
     text-align: right;
-    font-size: 2rem;
+    font-size: 40px;
     text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
-}
-
-.banner__info__place {
-    font-size: 3rem;
+    line-height: 1.2;
 }
 
 .banner__info a {
@@ -94,12 +34,12 @@
     font-style: normal;
     font-weight: 500;
     position: sticky;
-    padding: .5rem .5rem;
+    padding: .8rem .8rem .8rem .8rem;
     display: inline-block;
     color: #FFFFFF;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 40px;
     overflow: hidden;
     text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
 }
@@ -118,7 +58,7 @@ a span:nth-child(1) {
     top: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 4px;
     background: linear-gradient(to right, #0c002b, rgba(139, 17, 215, 0.78));
     animation: animate1 1.25s linear infinite;
 }
@@ -136,7 +76,7 @@ a span:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
-    width: 2px;
+    width: 4px;
     height: 100%;
     background: linear-gradient(to bottom, #0c002b, rgba(139, 17, 215, 0.78));
     animation: animate2 1.25s linear infinite;
@@ -157,7 +97,7 @@ a span:nth-child(3) {
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 2px;
+    height: 4px;
     background: linear-gradient(to left, #0c002b, rgba(139, 17, 215, 0.78));
     animation: animate3 1.25s linear infinite;
 }
@@ -175,7 +115,7 @@ a span:nth-child(4) {
     position: absolute;
     top: 0;
     left: 0;
-    width: 2px;
+    width: 4px;
     height: 100%;
     background: linear-gradient(to top, #0c002b, rgba(139, 17, 215, 0.78));
     animation: animate4 1.25s linear infinite;
@@ -200,7 +140,7 @@ a:hover {
 
 .banner__about {
     text-align: right;
-    padding-top: 35%;
+    padding-top: 28%;
     padding-right: 7%;
 }
 
@@ -210,7 +150,7 @@ a:hover {
     font-weight: 500;
     color: #FFFFFF;
     text-align: right;
-    font-size: 5rem;
+    font-size: 96px;
 }
 
 .banner__about__hackathon {
@@ -221,6 +161,7 @@ a:hover {
     text-align: right;
     font-size: 1.5rem;
     text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+    padding-bottom: 20%;
 }
 
 .head {
@@ -230,18 +171,19 @@ a:hover {
     font-weight: 500;
     color: #FFFFFF;
     text-align: center;
-    font-size: 4rem;
+    font-size: 56px;
     text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
     background-color: #010120;
+    padding-bottom: 3%;
 }
 
 .categories {
+    padding-bottom: 16%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    height: 90vh;
     background-color: #010120;
 }
 
@@ -266,7 +208,7 @@ a:hover {
     color: #FFFFFF;
     font-size: 2vw;
     text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
-    text-align: center;
+    text-align: left;
 }
 
 .pageBenefits {
@@ -282,27 +224,30 @@ a:hover {
     justify-content: center;
 }
 
+.pageBenefits-text {
+    font-size: 14px;
+}
+
 .pageBenefits {
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 2%;
-    padding-bottom: 5%;
-    padding-left: 13%;
-    padding-right: 13%;
+    padding-bottom: 16%;
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
 .pageBenefits-card {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 .pageBenefits-card img {
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
 }
 
 .pageBenefits>* {
@@ -314,18 +259,20 @@ a:hover {
     justify-content: center;
     align-items: center;
     border: 5px solid white;
-    box-shadow: 0px 0px 18px 5px rgba(139, 17, 215, 0.78);
+    box-shadow: 0px 0px 18px 5px rgba(191, 112, 192, 0.78);
     border-radius: 30px;
     font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 500;
     color: #FFFFFF;
     text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+    padding: 30px 30px 30px 30px;
+    font-size: 10px;
 }
 
 .front {
+    text-align: center;
     border: 5px solid white;
-    box-shadow: 0px 0px 18px 5px rgba(139, 17, 215, 0.78);
+    //box-shadow: 0px 0px 18px 5px rgba(139, 17, 215, 0.78);
+    animation: pulse .5s infinite alternate ease-in-out;
     border-radius: 30px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -334,13 +281,70 @@ a:hover {
     text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
 }
 
+@keyframes pulse {
+    0% {
+        box-shadow: 0px 0px 18px 5px rgba(191, 112, 192, 0.78);
+    }
+    100% {
+        box-shadow: 0px 0px 18px 10px rgba(191, 112, 192, 0.78);
+    }
+}
+
 .how {
-    padding-top: 7%;
-    padding-bottom: 12%;
+    padding-bottom: 16%;
     background-color: #010120;
     text-align: center;
 }
 
 .how img {
-    width: 80%;
+    width: 60%;
+}
+
+details summary {
+    outline-style: none;
+    /* удалить обводку при фокусе */
+    cursor: pointer;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0px 0px 12px 3px rgba(139, 17, 215, 0.78);
+    padding: 1%;
+}
+
+details summary span {
+    width: 3%;
+    float: right;
+    transition: all .1s ease-out;
+}
+
+details summary span img {
+    width: 100%;
+    text-align: center;
+}
+
+details[open] summary span {
+    transform: rotate(90deg);
+    transition: all .1s ease-out;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq {
+    background-color: #010120;
+    font-size: 24px;
+    line-height: 44px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+    padding-bottom: 16%;
+}
+
+.answer {
+    border: 3px solid #FFFFFF;
+    box-shadow: 0px 0px 12px 3px rgba(139, 17, 215, 0.78);
+    padding: 1%;
+    border-top: none;
+}
+
+.non-brd {
+    border-top: none;
 }
