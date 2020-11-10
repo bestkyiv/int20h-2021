@@ -44,7 +44,14 @@
     text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
 }
 
-a::before {
+.banner__info a:hover {
+    color: #010120;
+    background: rgb(226, 137, 211);
+    box-shadow: 0 0 10px rgb(226, 137, 211), 0 0 40px rgb(226, 137, 211), 0 0 80px rgb(226, 137, 211);
+    text-decoration: none;
+}
+
+.banner__info a::before {
     content: "";
     position: absolute;
     top: 2px;
@@ -53,7 +60,7 @@ a::before {
     width: 50%;
 }
 
-a span:nth-child(1) {
+.banner__info a span:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +79,7 @@ a span:nth-child(1) {
     }
 }
 
-a span:nth-child(2) {
+.banner__info a span:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
@@ -92,7 +99,7 @@ a span:nth-child(2) {
     }
 }
 
-a span:nth-child(3) {
+.banner__info a span:nth-child(3) {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -111,7 +118,7 @@ a span:nth-child(3) {
     }
 }
 
-a span:nth-child(4) {
+.banner__info a span:nth-child(4) {
     position: absolute;
     top: 0;
     left: 0;
@@ -120,13 +127,6 @@ a span:nth-child(4) {
     background: linear-gradient(to top, #0c002b, rgba(139, 17, 215, 0.78));
     animation: animate4 1.25s linear infinite;
     animation-delay: 0.625s;
-}
-
-a:hover {
-    color: #010120;
-    background: rgb(226, 137, 211);
-    box-shadow: 0 0 10px rgb(226, 137, 211), 0 0 40px rgb(226, 137, 211), 0 0 80px rgb(226, 137, 211);
-    text-decoration: none;
 }
 
 @keyframes animate4 {
@@ -209,6 +209,9 @@ a:hover {
     font-size: 2vw;
     text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
     text-align: left;
+    .im {
+        text-align: center;
+    }
 }
 
 .pageBenefits {
@@ -316,7 +319,7 @@ details summary span {
 }
 
 details summary span img {
-    width: 100%;
+    width: 80%;
     text-align: center;
 }
 
@@ -508,7 +511,7 @@ details summary::-webkit-details-marker {
 
 .box:before,
 .box:after {
-    background: linear-gradient(235deg, #772aff, #010120, #2196F3);
+    background: #2196F3;
 }
 
 .box .content-later {
@@ -562,4 +565,95 @@ details summary::-webkit-details-marker {
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 1px;
+}
+
+.probest {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 56px;
+    text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+}
+
+.who-we-are {
+    background: #010120;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 24px;
+    text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+    padding-bottom: 16%;
+}
+
+.foto {
+    padding-top: 5% !important;
+}
+
+.who-we-are img {
+    width: 100%;
+    box-shadow: 0px 0px 12px 3px #C112FF;
+}
+
+.register-box {
+    background: rgba(180, 107, 225, 0.49);
+    box-shadow: 0px 0px 20px 9px rgba(180, 107, 225, 0.78);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 23px;
+    a {
+        display: flex;
+        border: .5px solid;
+        border-color: rgba(180, 107, 225, 0.49);
+        box-shadow: none;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        position: sticky;
+        padding: 10px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+        background: #010120;
+    }
+    a:hover {
+        border-color: white;
+    }
+}
+
+.register-now {
+    background: #010120;
+    padding: 3%;
+}
+
+footer {
+    background-color: #010120;
+    img {
+        max-width: 15%;
+        margin: 5px;
+    }
+    a {
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        color: #FFFFFF;
+        font-size: 24px;
+        text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78)
+    }
+    a:hover {
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        color: #FFFFFF;
+        font-size: 24px;
+    }
 }
