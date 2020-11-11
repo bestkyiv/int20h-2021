@@ -14,7 +14,7 @@
 .banner__info {
   position: relative;
   text-align: right;
-  padding-top: 28%;
+  padding-top: 33%;
   padding-right: 6%;
 }
 
@@ -25,12 +25,88 @@
   font-weight: 500;
   color: #FFFFFF;
   text-align: right;
-  font-size: 40px;
+  font-size: 35px;
+  text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+  line-height: 1.1;
+}
+
+.banner__info a {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  position: relative;
+  padding: .8rem .8rem .8rem .8rem;
+  display: block;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 35px;
+  overflow: hidden;
+  text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+}
+
+.banner-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: #010120;
+}
+
+.banner-mobile .banner-mobile__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 680px;
+  width: 90%;
+  padding: 40px;
+}
+
+.banner-mobile .banner-mobile__logo img {
+  -webkit-animation: big_small alternate infinite ease-in-out .5s;
+          animation: big_small alternate infinite ease-in-out .5s;
+  width: 100%;
+}
+
+.banner-mobile .banner-mobile__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: right;
+  font-size: 25px;
   text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
   line-height: 1.2;
 }
 
-.banner__info a {
+.banner-mobile a {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -41,9 +117,100 @@
   color: #FFFFFF;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 25px;
   overflow: hidden;
   text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+}
+
+.banner-mobile a:hover {
+  color: #010120;
+  background: #e289d3;
+  -webkit-box-shadow: 0 0 10px #e289d3, 0 0 40px #e289d3, 0 0 80px #e289d3;
+          box-shadow: 0 0 10px #e289d3, 0 0 40px #e289d3, 0 0 80px #e289d3;
+  text-decoration: none;
+}
+
+.banner-mobile a::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 50%;
+}
+
+.banner-mobile a span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(#0c002b), to(rgba(139, 17, 215, 0.78)));
+  background: linear-gradient(to right, #0c002b, rgba(139, 17, 215, 0.78));
+  -webkit-animation: animate1 1.25s linear infinite;
+          animation: animate1 1.25s linear infinite;
+}
+
+.banner-mobile a span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0c002b), to(rgba(139, 17, 215, 0.78)));
+  background: linear-gradient(to bottom, #0c002b, rgba(139, 17, 215, 0.78));
+  -webkit-animation: animate2 1.25s linear infinite;
+          animation: animate2 1.25s linear infinite;
+  -webkit-animation-delay: 0.625s;
+          animation-delay: 0.625s;
+}
+
+.banner-mobile a span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: -webkit-gradient(linear, right top, left top, from(#0c002b), to(rgba(139, 17, 215, 0.78)));
+  background: linear-gradient(to left, #0c002b, rgba(139, 17, 215, 0.78));
+  -webkit-animation: animate3 1.25s linear infinite;
+          animation: animate3 1.25s linear infinite;
+}
+
+.banner-mobile a span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0c002b), to(rgba(139, 17, 215, 0.78)));
+  background: linear-gradient(to top, #0c002b, rgba(139, 17, 215, 0.78));
+  -webkit-animation: animate4 1.25s linear infinite;
+          animation: animate4 1.25s linear infinite;
+  -webkit-animation-delay: 0.625s;
+          animation-delay: 0.625s;
+}
+
+@-webkit-keyframes big_small {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+@keyframes big_small {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
 }
 
 .banner__info a:hover {
@@ -60,7 +227,7 @@
   top: 2px;
   left: 2px;
   bottom: 2px;
-  width: 50%;
+  width: 30%;
 }
 
 .banner__info a span:nth-child(1) {
@@ -203,6 +370,43 @@
   }
 }
 
+.banner-mobile-about {
+  height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #010120;
+}
+
+.banner-mobile-about__timer {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: right;
+  font-size: 60px;
+}
+
+.banner-mobile-about__hackathon {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
+}
+
 .banner__about {
   text-align: right;
   padding-top: 28%;
@@ -224,7 +428,7 @@
   font-weight: 500;
   color: #FFFFFF;
   text-align: right;
-  font-size: 1.5rem;
+  font-size: 30px;
   text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
   padding-bottom: 20%;
 }
@@ -260,8 +464,7 @@
 }
 
 .categories__container {
-  width: 40vw;
-  height: 50vh;
+  width: 45vw;
   border: .3vw solid #FFFFFF;
   -webkit-box-shadow: 0px 0px 15px 6px rgba(139, 17, 215, 0.78);
           box-shadow: 0px 0px 15px 6px rgba(139, 17, 215, 0.78);
@@ -281,21 +484,31 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px;
-}
-
-.categories__container__table {
+  padding-top: 30px;
+  padding-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
   color: #FFFFFF;
   font-size: 2vw;
   text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
-  text-align: left;
+  text-align: center;
 }
 
-.categories__container__table .im {
+.cat-img img {
+  max-width: 100%;
+  margin-top: auto;
+}
+
+.bot {
+  margin-bottom: 30px;
+}
+
+.innerCategories {
   text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  float: left;
 }
 
 .pageBenefits {
@@ -337,8 +550,8 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 16%;
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .pageBenefits-card {
@@ -484,7 +697,6 @@ details summary::-webkit-details-marker {
   color: #FFFFFF;
   text-shadow: 0px 0px 12px rgba(139, 17, 215, 0.78);
   font-family: 'Montserrat', sans-serif;
-  padding-bottom: 16%;
 }
 
 .embed-responsive {
@@ -844,5 +1056,49 @@ footer a:hover {
   font-weight: 500;
   color: #FFFFFF;
   font-size: 24px;
+}
+
+@media only screen and (max-width: 1439px) {
+  .banner__info a {
+    width: 100%;
+    font-size: 30px;
+  }
+  .banner__info__dates,
+  .banner__info__place {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .banner__info a {
+    width: 40%;
+    font-size: 20px;
+  }
+  .banner__info__dates,
+  .banner__info__place {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner {
+    display: none;
+  }
+  .head {
+    font-size: 30px;
+  }
+  .organizers-1,
+  .organizers-2 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .banner-mobile,
+  .banner-mobile-about {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
