@@ -4,11 +4,13 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="css\bootstrap.css">
     <link rel="stylesheet" href="css\style.css">
+    <meta name="robots" content="noindex">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
@@ -16,6 +18,11 @@
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
     <div class="banner">
         <div class="container-fluid">
             <div class="row">
@@ -25,8 +32,8 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        <span></span> ЗАРЕЄСТРУВАТИСЯ
-                    </a>
+                        <span></span> СКОРО...
+                    </a><br/>
                     <span class='banner__info__dates'>21-22 лютого</span><br/>
                     <span class='banner__info__place'>ONLINE</span>
                 </div>
@@ -51,7 +58,7 @@
                 <span></span>
                 <span></span>
                 <span></span>
-                <span></span> ЗАРЕЄСТРУВАТИСЯ
+                <span></span> СКОРО...
             </a>
             <span class='banner-mobile__dates'>21-22 лютого</span>
             <span class='banner-mobile__place'>ONLINE</span>
@@ -70,21 +77,21 @@
         <div class="container-fluid">
             <center>
                 <div class="col-lg-12 categories__container">
-                    <div class="container">
-                        <div class="row bot">
-                            <div class="col-lg-4 cat-img">
+                    <div class="container-fluid">
+                        <div class="row bot no-gutter">
+                            <div class="col-lg-4 col-3 cat-img">
                                 <img src="images/web.png" alt="">
                             </div>
-                            <div class="col-lg-8 innerCategories">
-                                <span>Web development</span>
+                            <div class="col-lg-8 col-9 innerCategories">
+                                <span><a class='task' href='#'>Web development</a></span>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-4 cat-img">
+                        <div class="row no-gutter">
+                            <div class="col-lg-4 col-3 cat-img">
                                 <img src="images/mobile.png" alt="">
                             </div>
-                            <div class="col-lg-8 innerCategories">
-                                <span>Mobile development</span>
+                            <div class="col-lg-8 col-9 innerCategories">
+                                <span><a class='task' href='#'>Mobile development</a></span>
                             </div>
                         </div>
                     </div>
@@ -92,7 +99,7 @@
             </center>
         </div>
     </div>
-    </div>
+
     <div class="сol-lg-12 head">
         Що ти отримаєш
     </div>
@@ -136,7 +143,7 @@
                 <img class="pageBenefits-img" src="images/sleeping.png" alt="" />
                 <h4 class="pageBenefits-text">20 sleepless hours</h4>
             </div>
-            <div class="back">
+            <div class="back large">
                 <p>
                     Кинь собі виклик: розв'яжи цікаву задачу за 20 годин, прокачай стресостійкість та навички роботи в команді, отримай досвід розробки онлайн, навчися презентувати свої ідеї
                 </p>
@@ -169,7 +176,8 @@
         Як потрапити на INT20H
     </div>
     <div class="how">
-        <img src="images/timeline.png" alt="">
+        <img class='desk' src="images/timeline-desktop.png" alt="">
+        <img src="images/timeline-mobile.png" alt="" class="mob">
     </div>
     <div class="сol-lg-12 head">
         FAQ
@@ -245,15 +253,17 @@
     <div class="last-year">
         <div class="container-xl">
             <div class="row">
-                <div class="aftervideo col-lg-5" style='padding-bottom: 16%;'>
-                    <p>Афтервідео INT20H</p>
+                <div class="col-lg-2"></div>
+                <div class="aftervideo col-lg-8" style='padding-bottom: 16%;'>
+                    <p>Афтервідео INT20H 2020</p>
                     <div class="embed-responsive embed-responsive-16by9 center-block">
-                        <iframe class='embed-responsive-item' src="https://www.youtube.com/embed/S1i5coU-0_Q" allowfullscreen></iframe>
+                        <iframe class='embed-responsive-item' src="https://www.youtube.com/embed/oGE5BWXe9iE" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-lg-2"></div>
-                <div class="winners col-lg-5">
-                    <p>Переможці INT20H</p>
+                <div class="col-lg-2"></div>
+                <div class="winners col-lg-8" style='padding-bottom: 16%;'>
+                    <p>Переможці INT20H 2020</p>
                     <div class="your-class">
                         <div class='winimg'><img src="images/web-chemps.png" alt=""></div>
                         <div class='winimg'><img src="images/mobile-chemps.png" alt=""></div>
@@ -261,6 +271,7 @@
                         <div class='winimg'><img src="images/ds-chemps.png" alt=""></div>
                     </div>
                 </div>
+                <div class="col-lg-2"></div>
             </div>
         </div>
     </div>
@@ -273,22 +284,10 @@
 
                 <div class="partners__body">
                     <div class="partner-logo">
-                        <img src="images/techiia.png" />
+                        <img src="images/partners/techiia.svg" />
                     </div>
                     <div class="partner-logo">
-                        <img src="images/techiia.png" />
-                    </div>
-                    <div class="partner-logo">
-                        <img src="images/techiia.png" />
-                    </div>
-                    <div class="partner-logo">
-                        <img src="images/techiia.png" />
-                    </div>
-                    <div class="partner-logo">
-                        <img src="images/techiia.png" />
-                    </div>
-                    <div class="partner-logo">
-                        <img src="images/techiia.png" />
+                        <img src="images/partners/valtech.png" />
                     </div>
                 </div>
             </div>
@@ -298,108 +297,106 @@
         Команда організаторів
     </div>
     <div class="organizers-1">
-
         <div class="box">
             <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
+                <img src="images/organizers/Yaroslava.png" width='200px' height='180px' alt="">
             </div>
             <div class="content">
-                <h2>Головний організатор</h2>
+                <h2>CR Responsible</h2>
             </div>
             <div class="content-later">
-                <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293</span>
+                <span>Ярослава Бондарчук</span>
+                <span class='smaller'>CR Responsible</span>
+                <span class="smaller"><a class='organizers_mail' href='mailto:yaroslava.bondarchuk@best.eu.org'>yaroslava.bondarchuk@best.eu.org</a></span>
+                <span class="smaller-bit"><a class='organizers_mail' href='tel:+380680068841'>+380680068841</a></span>
             </div>
         </div>
         <div class="box">
             <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
+                <img src="images/organizers/Sofia.png" width='200px' height='180px' alt="">
             </div>
             <div class="content">
-                <h2>Головний організатор</h2>
+                <h2>Main Organizer</h2>
             </div>
             <div class="content-later">
                 <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293</span>
+                <span class='smaller'>Main Organizer</span>
+                <span class="smaller"><a class='organizers_mail' href='mailto:34shumelsof@gmail.com'>34shumelsof@gmail.com</a></span>
+                <span class="smaller-bit"><a class='organizers_mail' href='tel:+380688402293'>+380688402293</a></span>
             </div>
         </div>
         <div class="box">
             <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
+                <img src="" width='200px' height='180px' alt="Oleksandr">
             </div>
             <div class="content">
-                <h2>Головний організатор</h2>
+                <h2>CR Responsible</h2>
             </div>
             <div class="content-later">
-                <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293</span>
+                <span>Олександр Кобзар</span>
+                <span class='smaller'>CR Responsible</span>
+                <span class="smaller"><a class='organizers_mail' href='mailto:oleksandr.kobzar@best.eu.org'>oleksandr.kobzar@best.eu.org</a></span>
+                <span class="smaller-bit"><a class='organizers_mail' href='tel:+380988353547'>+380988353547</a></span>
             </div>
         </div>
     </div>
     <div class="organizers-1">
         <div class="box">
             <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
+                <img src="images/organizers/Nazar.JPG" width='200px' height='180px' alt="">
             </div>
             <div class="content">
-                <h2>Головний організатор</h2>
+                <h2>Participant Responsible</h2>
             </div>
             <div class="content-later">
-                <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293
+                <span>Назар Яскал</span>
+                <span class='smaller'>Participant Responsible</span>
+                <span class="smaller-bit"><a class='organizers_mail' href='mailto:yaskalnazar@gmail.com'>yaskalnazar@gmail.com</a></span>
+                <span class="smaller-bit"></span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/organizers/Ekaterina.JPG" width='200px' height='180px' alt="">
+            </div>
+            <div class="content">
+                <h2>Designer</h2>
+            </div>
+            <div class="content-later">
+                <span>Катерина Дівущак</span>
+                <span class='smaller'>Designer</span>
+                <span class="smaller-bit"><a class='organizers_mail' href='mailto:katedivushchak@gmail.com'>katedivushchak@gmail.com</a></span>
+                <span class="smaller">
                 </span>
             </div>
         </div>
         <div class="box">
             <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
+                <img src="" width='200px' height='180px' alt="Inga">
             </div>
             <div class="content">
-                <h2>Головний організатор</h2>
+                <h2>HR Responsible</h2>
             </div>
             <div class="content-later">
-                <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293
+                <span>Інга Манжуленко</span>
+                <span class='smaller'>HR Responsible</span>
+                <span class="smaller-bit"><a class='organizers_mail' href='mailto:i.manjulka@gmail.com'>i.manjulka@gmail.com</a></span>
+                <span class="smaller">
                 </span>
             </div>
         </div>
         <div class="box">
             <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
+                <img src="images/organizers/Dmitriy.JPG" width='200px' height='180px' alt="">
             </div>
             <div class="content">
-                <h2>Головний організатор</h2>
+                <h2>PR Responsible</h2>
             </div>
             <div class="content-later">
-                <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293
-                </span>
-            </div>
-        </div>
-        <div class="box">
-            <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
-            </div>
-            <div class="content">
-                <h2>Головний організатор</h2>
-            </div>
-            <div class="content-later">
-                <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293
+                <span>Дмитро Сьомченко</span>
+                <span class='smaller'>PR Responsible</span>
+                <span class="smaller-bit"><a class='organizers_mail' href='mailto:dm.smchnk@gmail.com'>dm.smchnk@gmail.com</a></span>
+                <span class="smaller">
                 </span>
             </div>
         </div>
@@ -407,58 +404,234 @@
     <div class="organizers-2">
         <div class="box">
             <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
+                <img src="images/organizers/Ruslan.JPG" width='200px' height='180px' alt="">
             </div>
             <div class="content">
-                <h2>Головний організатор</h2>
+                <h2>Photo & Video Responsible</h2>
             </div>
             <div class="content-later">
-                <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293
+                <span>Руслан Мельник</span>
+                <span class='smaller'>Photo & Video Responsible</span>
+                <span class="smaller-bit"><a class='organizers_mail' href='mailto:rusaqwerty535@gmail.com'>rusaqwerty535@gmail.com</a></span>
+                <span class="smaller">
                 </span>
             </div>
         </div>
         <div class="box">
             <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
+                <img src="images/organizers/Mykyta.JPG" width='200px' height='180px' alt="">
             </div>
             <div class="content">
-                <h2>Головний організатор</h2>
+                <h2>Topic & IT Responsible</h2>
             </div>
             <div class="content-later">
-                <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293
+                <span>Микита Головакін</span>
+                <span class='smaller'>Topic & IT Responsible</span>
+                <span class="smaller-bit"><a class='organizers_mail' href='mailto:golovakin.kinds@gmail.com'>golovakin.kinds@gmail.com</a></span>
+                <span class="smaller">
                 </span>
             </div>
         </div>
         <div class="box">
             <div class="imgBx">
-                <img src="images/MO.jpg" width='200px' height='180px' alt="">
+                <img src="images/organizers/Evgeniy.png" width='200px' height='180px' alt="">
             </div>
             <div class="content">
-                <h2>Головний організатор</h2>
+                <h2>Logist</h2>
             </div>
             <div class="content-later">
-                <span>Софія Шумель</span>
-                <span class='smaller'>Головний організатор</span>
-                <span class="smaller">34shumelsof@gmail.com</span>
-                <span class="smaller">+380688402293
+                <span>Євгеній Поваров</span>
+                <span class='smaller'>Logist</span>
+                <span class="smaller-bit"><a class='organizers_mail' href='mailto:evgeny2002@ukr.net'>evgeny2002@ukr.net</a></span>
+                <span class="smaller">
                 </span>
             </div>
         </div>
     </div>
 
+    <div class="organizers-mobile">
+        <center>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="images/organizers/Sofia.png" width='200px' height='180px' alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Main Organizer</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Софія Шумель</span>
+                                    <span class='smaller'>Main Organizer</span>
+                                    <span class="smaller"><a class='organizers_mail' href='mailto:34shumelsof@gmail.com'>34shumelsof@gmail.com</a></span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='tel:+380688402293'>+380688402293</a></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                        <div class="box">
+                                <div class="imgBx">
+                                    <img src="images/organizers/Yaroslava.png" width='200px' height='180px' alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>CR Responsible</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Ярослава Бондарчук</span>
+                                    <span class='smaller'>CR Responsible</span>
+                                    <span class="smaller"><a class='organizers_mail' href='mailto:yaroslava.bondarchuk@best.eu.org'>yaroslava.bondarchuk@best.eu.org</a></span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='tel:+380680068841'>+380680068841</a></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="" width='200px' height='180px' alt="Oleksandr">
+                                </div>
+                                <div class="content">
+                                    <h2>CR Responsible</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Олександр Кобзар</span>
+                                    <span class='smaller'>CR Responsible</span>
+                                    <span class="smaller"><a class='organizers_mail' href='mailto:oleksandr.kobzar@best.eu.org'>oleksandr.kobzar@best.eu.org</a></span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='tel:+380988353547'>+380988353547</a></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="images/organizers/Nazar.JPG" width='200px' height='180px' alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Participant Responsible</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Назар Яскал</span>
+                                    <span class='smaller'>Participant Responsible</span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='mailto:yaskalnazar@gmail.com'>yaskalnazar@gmail.com</a></span>
+                                    <span class="smaller-bit"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="images/organizers/Ekaterina.JPG" width='200px' height='180px' alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Designer</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Катерина Дівущак</span>
+                                    <span class='smaller'>Designer</span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='mailto:katedivushchak@gmail.com'>katedivushchak@gmail.com</a></span>
+                                    <span class="smaller">
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="" width='200px' height='180px' alt="Inga">
+                                </div>
+                                <div class="content">
+                                    <h2>HR Responsible</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Інга Манжуленко</span>
+                                    <span class='smaller'>HR Responsible</span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='mailto:i.manjulka@gmail.com'>i.manjulka@gmail.com</a></span>
+                                    <span class="smaller">
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="images/organizers/Dmitriy.JPG" width='200px' height='180px' alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>PR Responsible</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Дмитро Сьомченко</span>
+                                    <span class='smaller'>PR Responsible</span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='mailto:dm.smchnk@gmail.com'>dm.smchnk@gmail.com</a></span>
+                                    <span class="smaller">
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="images/organizers/Ruslan.JPG" width='200px' height='180px' alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Photo & Video Responsible</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Руслан Мельник</span>
+                                    <span class='smaller'>Photo & Video Responsible</span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='mailto:rusaqwerty535@gmail.com'>rusaqwerty535@gmail.com</a></span>
+                                    <span class="smaller">
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="images/organizers/Mykyta.JPG" width='200px' height='180px' alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Topic & IT Responsible</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Микита Головакін</span>
+                                    <span class='smaller'>Topic & IT Responsible</span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='mailto:golovakin.kinds@gmail.com'>golovakin.kinds@gmail.com</a></span>
+                                    <span class="smaller">
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="box">
+                                <div class="imgBx">
+                                    <img src="images/organizers/Evgeniy.png" width='200px' height='180px' alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Logist</h2>
+                                </div>
+                                <div class="content-later">
+                                    <span>Євгеній Поваров</span>
+                                    <span class='smaller'>Logist</span>
+                                    <span class="smaller-bit"><a class='organizers_mail' href='mailto:evgeny2002@ukr.net'>evgeny2002@ukr.net</a></span>
+                                    <span class="smaller">
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </center>
+    </div>
     <div class="who-we-are">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
                     <p class="probest">Про BEST</p>
-                    Board of European Students of Technology — міжнародна студентська організація в Європі. Наша мета — розвиток студентів. Саме організацією проєктів, які покликані відкрити потенціал української молоді й покращити їх особистісні та професійні навички, займається
-                    представник BEST в Україні — локальна група BEST Kyiv.
+                    Board of European Students of Technology — міжнародна студентська організація в Європі. Наша мета — розвиток студентів. <br/>Саме організацією проєктів, які покликані відкрити потенціал української молоді й покращити їх особистісні
+                    та професійні навички, займається представник BEST в Україні — локальна група BEST Kyiv.
                 </div>
 
                 <div class="col-lg-5 mt-0">
@@ -472,9 +645,9 @@
     <div class="register-now">
         <div class="container">
             <div class="register-box">
-                <span>Реєструйся до хх січня включно!</span>
+                <span>Реєструйся до 18 січня включно!</span>
                 <a href="#">
-                    ЗАРЕЄСТРУВАТИСЯ
+                    СКОРО...
                 </a>
             </div>
         </div>
@@ -482,19 +655,24 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <a href='#'><img src="images/best-link.png" alt=""></a>
-                    <a href='#'><img src="images/insta-link.png" alt=""></a>
-                    <a href='#'><img src="images/facebook-link.png" alt=""></a>
-                    <a href='#'><img src="images/telegram-link.png" alt=""></a>
+                <div class="col-lg-3 col-xs-12" style='text-align: center'>
+                    <a href='https://best-kyiv.org/' target="_blank"><img src="images/best-link.png" alt=""></a>
+                    <a href='https://www.instagram.com/best_kyiv/' target="_blank"><img src="images/insta-link.png" alt=""></a>
+                    <a href='https://www.facebook.com/best.kyiv/' target="_blank"><img src="images/facebook-link.png" alt=""></a>
+                    <a href='https://www.linkedin.com/company/best-kyiv' target="_blank"><img src="images/linkedin-link.png" alt=""></a>
+                    <a href='https://t.me/bestkyiv' target="_blank"><img src="images/telegram-link.png" alt=""></a>
                 </div>
                 <div class="col-lg-7"></div>
-                <div class="col-lg-1"><a href='#'>Регламент</a></div>
+                <div class="col-lg-1" style='text-align: center'><a href='#'>Регламент</a></div>
                 <div class="col-lg-1"></div>
             </div>
         </div>
     </footer>
-
+    <script>
+        window.addEventListener('load', function() {
+            document.querySelector('body').classList.add("loaded")
+        });
+    </script>
     <script src="js\jquery-3.5.1.min.js"></script>
     <script src="js\bootstrap.min.js"></script>
 
@@ -503,13 +681,39 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script>
+        document.body.onload = function() {
+            setTimeout(function() {
+                var preloader = document.getElementById('page-preloader');
+                if (!preloader.classList.contains('done')) {
+                    preloader.classList.add('done');
+                }
+            }, 1000);
+        }
         $('.your-class').slick({
             infinite: true,
             speed: 300,
             slidesToShow: 1,
-            adaptiveHeight: false
+            adaptiveHeight: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            nextArrow: "<img class='a-right control-c prev slick-next' src='images/arrow-right.svg'>",
+            prevArrow: "<img class='a-left control-c prev slick-prev' src='images/arrow-left.svg'>",
+
+            responsive: [{
+                breakpoint: 767,
+                settings: {
+                    arrows: false
+                }
+            }]
         });
+    </script>
+    <script>
+        new Splide('.splide', {
+            arrows: false,
+            type: 'loop'
+        }).mount();
     </script>
 </body>
 
