@@ -4,11 +4,212 @@
   margin: 0;
 }
 
+.disappear1 {
+  -webkit-animation: disapp 1s ease-in-out infinite alternate;
+          animation: disapp 1s ease-in-out infinite alternate;
+}
+
+.disappear2 {
+  -webkit-animation: disapp 2s ease-in-out infinite alternate;
+          animation: disapp 2s ease-in-out infinite alternate;
+}
+
+.disappear3 {
+  -webkit-animation: disapp .8s ease-in-out infinite alternate;
+          animation: disapp .8s ease-in-out infinite alternate;
+}
+
+.disappear4 {
+  -webkit-animation: disapp 1.5s ease-in-out infinite alternate;
+          animation: disapp 1.5s ease-in-out infinite alternate;
+}
+
+.triangles {
+  z-index: -4;
+}
+
+@-webkit-keyframes disapp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .banner {
   background: url(../images/logo_lines.svg) no-repeat;
   background-size: 100%;
   background-color: #010120;
   padding: 24px;
+}
+
+.tri1 {
+  position: absolute;
+  max-width: 70%;
+  padding-left: 61%;
+  padding-top: 4%;
+}
+
+.tri1 img {
+  width: 100%;
+}
+
+.tri2 {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  max-width: 10%;
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+}
+
+.tri2 img {
+  width: 80%;
+}
+
+.tri3 {
+  position: absolute;
+  padding-top: 15%;
+  right: 16%;
+  max-width: 6%;
+  max-height: 5%;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tri3 img {
+  width: 100%;
+}
+
+.tri4 {
+  position: absolute;
+  padding-top: 60%;
+  right: 55%;
+  max-width: 6%;
+  max-height: 5%;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tri4 img {
+  width: 100%;
+}
+
+.tri5 {
+  position: absolute;
+  padding-top: 50%;
+  right: 15%;
+  max-width: 6%;
+  max-height: 5%;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tri5 img {
+  width: 100%;
+}
+
+.tri6 {
+  position: absolute;
+  padding-top: 55%;
+  right: 17%;
+  max-width: 6%;
+  max-height: 5%;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tri6 img {
+  width: 80%;
+}
+
+.tri7 {
+  position: absolute;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  padding-top: 60%;
+  left: 70%;
+  max-width: 6%;
+  max-height: 5%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tri7 img {
+  width: 100%;
+}
+
+.tri8 {
+  position: absolute;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  padding-top: 65%;
+  left: 32%;
+  max-width: 6%;
+  max-height: 5%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tri8 img {
+  width: 100%;
+}
+
+.tri9 {
+  position: absolute;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  padding-top: 74%;
+  left: -5%;
+  max-width: 6%;
+  max-height: 5%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tri9 img {
+  width: 100%;
+}
+
+.tri10 {
+  position: absolute;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  padding-top: 87%;
+  left: 46%;
+  max-width: 6%;
+  max-height: 5%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tri10 img {
+  width: 100%;
+}
+
+.tri11 {
+  position: absolute;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  padding-top: 93%;
+  left: 20%;
+  max-width: 8%;
+  max-height: 5%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.tri11 img {
+  width: 100%;
 }
 
 .banner__info {
@@ -1226,6 +1427,51 @@ footer a:hover {
   .organizers-mobile {
     display: none;
   }
+  #scrollPath {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  #progressbar {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#cf00cf), to(#008aff));
+    background: linear-gradient(#cf00cf, #008aff);
+    -webkit-animation: progressing 5s linear infinite;
+            animation: progressing 5s linear infinite;
+  }
+  @-webkit-keyframes progressing {}  #progressbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#cf00cf), to(#008aff));
+    background: linear-gradient(#cf00cf, #008aff);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  #progressbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#cf00cf), to(#008aff));
+    background: linear-gradient(#cf00cf, #008aff);
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
+  }
 }
 
 #loader-wrapper {
@@ -1347,5 +1593,9 @@ footer a:hover {
           transform: translateY(-100%);
   -webkit-transition: all 0.3s 1s ease-out;
   transition: all 0.3s 1s ease-out;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 /*# sourceMappingURL=style.css.map */

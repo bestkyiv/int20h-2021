@@ -3,11 +3,178 @@
             margin: 0;
         }
         
+        .disappear1 {
+            animation: disapp 1s ease-in-out infinite alternate;
+        }
+        
+        .disappear2 {
+            animation: disapp 2s ease-in-out infinite alternate;
+        }
+        
+        .disappear3 {
+            animation: disapp .8s ease-in-out infinite alternate;
+        }
+        
+        .disappear4 {
+            animation: disapp 1.5s ease-in-out infinite alternate;
+        }
+        
+        .triangles {
+            z-index: -4;
+        }
+        
+        @-webkit-keyframes disapp {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
         .banner {
             background: url(../images/logo_lines.svg) no-repeat;
             background-size: 100%;
             background-color: #010120;
             padding: 24px;
+        }
+        
+        .tri1 {
+            position: absolute;
+            max-width: 70%;
+            padding-left: 61%;
+            padding-top: 4%;
+            img {
+                width: 100%;
+            }
+        }
+        
+        .tri2 {
+            position: absolute;
+            top: 3%;
+            right: 3%;
+            max-width: 10%;
+            img {
+                width: 80%;
+            }
+            transform: rotate(-50deg)
+        }
+        
+        .tri3 {
+            position: absolute;
+            padding-top: 15%;
+            right: 16%;
+            max-width: 6%;
+            max-height: 5%;
+            img {
+                width: 100%;
+            }
+            transform: rotate(-7deg);
+            object-fit: scale-down;
+        }
+        
+        .tri4 {
+            position: absolute;
+            padding-top: 60%;
+            right: 55%;
+            max-width: 6%;
+            max-height: 5%;
+            img {
+                width: 100%;
+            }
+            transform: rotate(-60deg);
+            object-fit: scale-down;
+        }
+        
+        .tri5 {
+            position: absolute;
+            padding-top: 50%;
+            right: 15%;
+            max-width: 6%;
+            max-height: 5%;
+            img {
+                width: 100%;
+            }
+            transform: rotate(-15deg);
+            object-fit: scale-down;
+        }
+        
+        .tri6 {
+            position: absolute;
+            padding-top: 55%;
+            right: 17%;
+            max-width: 6%;
+            max-height: 5%;
+            img {
+                width: 80%;
+            }
+            transform: rotate(15deg);
+            object-fit: scale-down;
+        }
+        
+        .tri7 {
+            position: absolute;
+            transform: rotate(50deg);
+            padding-top: 60%;
+            left: 70%;
+            max-width: 6%;
+            max-height: 5%;
+            img {
+                width: 100%;
+            }
+            object-fit: scale-down;
+        }
+        
+        .tri8 {
+            position: absolute;
+            transform: rotate(-10deg);
+            padding-top: 65%;
+            left: 32%;
+            max-width: 6%;
+            max-height: 5%;
+            img {
+                width: 100%;
+            }
+            object-fit: scale-down;
+        }
+        
+        .tri9 {
+            position: absolute;
+            transform: rotate(-30deg);
+            padding-top: 74%;
+            left: -5%;
+            max-width: 6%;
+            max-height: 5%;
+            img {
+                width: 100%;
+            }
+            object-fit: scale-down;
+        }
+        
+        .tri10 {
+            position: absolute;
+            transform: rotate(20deg);
+            padding-top: 87%;
+            left: 46%;
+            max-width: 6%;
+            max-height: 5%;
+            img {
+                width: 100%;
+            }
+            object-fit: scale-down;
+        }
+        
+        .tri11 {
+            position: absolute;
+            transform: rotate(10deg);
+            padding-top: 93%;
+            left: 20%;
+            max-width: 8%;
+            max-height: 5%;
+            img {
+                width: 100%;
+            }
+            object-fit: scale-down;
         }
         
         .banner__info {
@@ -975,6 +1142,47 @@
             .organizers-mobile {
                 display: none;
             }
+            #scrollPath {
+                z-index: 9999;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 10px;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.05);
+            }
+            #progressbar {
+                z-index: 9999;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 10px;
+                height: 100%;
+                background: linear-gradient(#cf00cf, #008aff);
+                animation: progressing 5s linear infinite;
+            }
+            @-webkit-keyframes progressing {}
+            #progressbar::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#cf00cf, #008aff);
+                ;
+                filter: blur(10px);
+            }
+            #progressbar::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#cf00cf, #008aff);
+                filter: blur(30px);
+            }
         }
         
         #loader-wrapper {
@@ -1093,4 +1301,8 @@
             visibility: hidden;
             transform: translateY(-100%);
             transition: all 0.3s 1s ease-out;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 0;
         }
